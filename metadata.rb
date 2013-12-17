@@ -13,10 +13,3 @@ depends 'openssl' #depends on build-essential
 depends 'mysql' # depends on openssl
 depends 'database' #depends on mysql
 
-attribute           "singularity/db_name",
-  :recipes       => ["singularity::db_setup"],
-  :display_name  => "database name",
-  :description   => "meh",
-  :default       => "singularity"
-
-

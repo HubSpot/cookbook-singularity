@@ -1,3 +1,7 @@
 default[:singularity] = {
-  :db_name => "singularity"
+  :database => {
+    :db_name => "singularity",
+    :username => "singularity",
+    :password => "9thlevel"
+  }
 }
