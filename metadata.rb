@@ -8,7 +8,7 @@ version          '0.1.0'
 supports         'ubuntu'
 recipe           "singularity::db_setup", "initial MySQL setup for Singularity"
 
-depends "mysql_database"
+depends "database"
 
 attribute           "singularity/db_name",
   :recipes       => ["singularity::db_setup"],
