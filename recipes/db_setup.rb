@@ -7,7 +7,7 @@ mysql_connection_info = {
   :password => node['mysql']['server_root_password']
 }
 
-mysql_database "#{node[:singularity][:db_name]}" do
+mysql_database "singularity" do
   connection mysql_connection_info
   action :create
 end
