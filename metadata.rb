@@ -8,7 +8,10 @@ version          '0.1.0'
 supports         'ubuntu'
 recipe           "singularity::db_setup", "initial MySQL setup for Singularity"
 
-depends "database"
+depends 'build-essential'
+depends 'openssl' #depends on build-essential
+depends 'mysql' # depends on openssl
+depends 'database' #depends on mysql
 
 attribute           "singularity/db_name",
   :recipes       => ["singularity::db_setup"],
