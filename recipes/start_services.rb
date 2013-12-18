@@ -1,6 +1,6 @@
 bash "starting zookeeper" do
   code   <<-EOH
-    mesos/build/3rdparty/zookeeper-3.3.4/bin/zkServer.sh start
+    /home/vagrant/mesos/build/3rdparty/zookeeper-3.3.4/bin/zkServer.sh start
   EOH
   action :run
   not_if ("pgrep zoo")
