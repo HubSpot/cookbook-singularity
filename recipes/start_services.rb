@@ -5,12 +5,3 @@ bash "starting zookeeper" do
   EOH
   action :run
 end
-
-bash "starting mesos" do
-  code   <<-EOH
-    sleep 5
-    mesos-stop-cluster.sh || true
-    mesos-start-cluster.sh 
-  EOH
-  action :run
-end
