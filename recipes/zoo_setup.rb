@@ -12,6 +12,11 @@ template_variables = {
    :zookeeper_client_address    => client_address
 }
 
+directory data_dir do
+   mode "0755"
+   action :create
+end
+
 template zoo_cfg do
     source "zoo.cfg.erb"
     mode "0644"
