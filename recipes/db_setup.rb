@@ -26,3 +26,7 @@ mysql_database_user node[:singularity][:database][:username] do
   privileges [:all]
   action [:grant]
 end
+
+service "mysql" do
+  action :restart
+end
