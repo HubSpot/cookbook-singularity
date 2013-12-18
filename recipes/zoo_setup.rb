@@ -7,7 +7,6 @@ client_address = node['zookeeper']['client_address']
 zoo_cfg = "#{config_dir}/zoo.cfg"
 
 template_variables = {
-   :zookeeper_servers           => servers,
    :zookeeper_data_dir          => data_dir,
    :zookeeper_client_port       => client_port,
    :zookeeper_client_address    => client_address
