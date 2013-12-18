@@ -1,5 +1,4 @@
 bash "starting zookeeper" do
-  cwd    "#{node[:mesos][:home]}"
   code   <<-EOH
     mesos/build/3rdparty/zookeeper-3.3.4/bin/zkServer.sh start
   EOH
@@ -8,7 +7,6 @@ bash "starting zookeeper" do
 end
 
 bash "starting mesos" do
-  cwd    "#{node[:mesos][:home]}"
   code   <<-EOH
     mesos-start-cluster.sh
   EOH
