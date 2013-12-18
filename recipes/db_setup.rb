@@ -12,6 +12,12 @@ mysql_database node[:singularity][:database][:db_name] do
   action :create
 end
 
+mysql_database 'mysql' do
+  connection mysql_connection_info
+  sql        'delete from user where User = ""'
+  action     :query
+end
+
 mysql_database_user node[:singularity][:database][:username] do
   connection mysql_connection_info
   password node[:singularity][:database][:password]
