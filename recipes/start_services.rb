@@ -8,7 +8,7 @@ end
 
 bash "starting mesos" do
   code   <<-EOH
-    mesos-start-cluster.sh
+    mesos-start-cluster.sh > /tmp/mesos-start.log
   EOH
   action :run
   not_if ("pgrep mesos")
