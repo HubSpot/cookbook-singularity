@@ -1,8 +1,8 @@
-app_root_dir = node['zookeeper']['root_dir']
-data_dir = node['zookeeper']['data_dir']
-config_dir = node['zookeeper']['config_dir']
-client_port = node['zookeeper']['client_port']
-client_address = node['zookeeper']['client_address']
+app_root_dir = node[:singularity][:zookeeper][:root_dir]
+data_dir = node[:singularity][:zookeeper][:data_dir]
+config_dir = node[:singularity][:zookeeper][:config_dir]
+client_port = node[:singularity][:zookeeper][:client_port]
+client_address = node[:singularity][:zookeeper][:client_address]
 
 zoo_cfg = "#{config_dir}/zoo.cfg"
 
