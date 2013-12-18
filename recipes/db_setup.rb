@@ -23,6 +23,6 @@ mysql_database_user node[:singularity][:database][:username] do
   password node[:singularity][:database][:password]
   database_name node[:singularity][:database][:db_name]
   host '%'
-  privileges [:all]
-  action [:create, :grant]
+  privileges [:select, :update, :insert]
+  action [:grant]
 end
