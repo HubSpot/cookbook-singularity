@@ -1,3 +1,3 @@
-include_recipe "singularity::db_setup"
-include_recipe "singularity::zoo_setup"
-include_recipe "singularity::start_services"
+include_recipe "singularity::zookeeper"
+include_recipe "singularity::mesos"
+include_recipe "singularity::mysql"
