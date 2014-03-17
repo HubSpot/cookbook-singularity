@@ -4,7 +4,7 @@ private_ip = node[:network][:interfaces][:eth1][:addresses].detect{|k,v| v[:fami
   directory dir do
     owner "root"
     group "root"
-    mode 00644
+    mode 00755
     action :create
   end
 
