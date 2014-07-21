@@ -1,18 +1,29 @@
-private_ip = node[:network][:interfaces][:eth1][:addresses].detect{|k,v| v[:family] == "inet" }.first
+mesos_package_version = node[:mesos][:package_version]
 
-directory '/etc/mesos-master' do
+apt_repository "mesosphere" do
+  uri "http://repos.mesosphere.io/ubuntu"
+  distribution node['lsb']['codename']
+  components ["main"]
+end
+
+apt_package "mesos" do
+  action :install
+  version mesos_package_version
+  options "-y --force-yes"  # ghetto
+end
+
+directory '/etc/mesos' do
   owner 'root'
   group 'root'
   action :create
 end
 
-file '/etc/mesos-master/ip' do
-  owner 'root'
-  group 'root'
-  mode '0644'
-  action :create
-  content private_ip
+node[:mesos][:common].each do |key, value|
+  file "/etc/mesos/#{key}" do
+    owner 'root'
+    group 'root'
+    mode '0644'
+    action :create
+    content value
+  end
 end
-
-include_recipe "mesos::master"
-include_recipe "mesos::slave"
