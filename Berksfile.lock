@@ -1,0 +1,5 @@
+DEPENDENCIES
+  hostsfile
+
+GRAPH
+  hostsfile (2.4.5)
