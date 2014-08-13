@@ -9,7 +9,7 @@ default[:singularity] = {
 }
 
 default[:mesos] = {
-  :package_version => "0.19.1-1.0.ubuntu1204",
+  :package_version => "0.19.1-1.0.ubuntu1404",
   :common => {
     :ip => private_ip,
   },
