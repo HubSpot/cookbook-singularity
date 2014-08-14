@@ -5,6 +5,6 @@ end
 bash "sympolic link to node" do
   user "root"
   code <<-EOH
-     ln -s /usr/bin/nodejs /usr/bin/node
+     ln -sf /usr/bin/nodejs /usr/bin/node
   EOH
 end
