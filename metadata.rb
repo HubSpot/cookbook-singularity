@@ -7,7 +7,7 @@ version          '0.3.8'
 supports         'ubuntu'
 
 depends 'apt'
-depends 'mysql'
+depends 'mysql', '5.5.2'
 depends 'database'
 depends 'hostsfile'
 depends 'java'
