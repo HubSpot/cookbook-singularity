@@ -3,7 +3,7 @@ maintainer       'Tom Petr'
 maintainer_email 'tpetr@hubspot.com'
 license          'All rights reserved'
 description      'Installs Singularity dependencies (mesos, zk, mysql)'
-version          '0.3.8'
+version          '0.4.0'
 supports         'ubuntu'
 
 depends 'apt'

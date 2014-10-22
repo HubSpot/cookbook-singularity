@@ -19,6 +19,11 @@ default[:mesos] = {
   :slave => {}
 }
 
+default[:docker] = {
+  :enabled => false,
+  :package_version => "1.0.1~dfsg1-0ubuntu1~ubuntu0.14.04.1",
+}
+
 override['java']['install_flavor'] = "oracle"
 override['java']['jdk_version'] = "7"
 override['java']['oracle']['accept_oracle_download_terms'] = true
