@@ -7,7 +7,7 @@ version          '0.4.0'
 supports         'ubuntu'
 
 depends 'apt'
-depends 'mysql', '5.5.2'
+depends 'mysql', '5.6.1'
 depends 'database'
 depends 'hostsfile'
 depends 'java'
