@@ -34,3 +34,5 @@ override['java']['install_flavor'] = "oracle"
 override['java']['jdk_version'] = "7"
 override['java']['oracle']['accept_oracle_download_terms'] = true
 override['java']['set_default'] = true
+set['java']['ark_timeout'] = 10
+set['java']['ark_retries'] = 3
