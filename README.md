@@ -1,6 +1,8 @@
----
+- - -
+
 **Heads up!** This has moved to https://github.com/HubSpot/Singularity/tree/master/cookbook
----
+
+- - -
 
 cookbook-singularity
 ====================
