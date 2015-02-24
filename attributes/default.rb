@@ -14,6 +14,10 @@ default[:singularity] = {
   },
 }
 
+default[:singularity][:git_ref] = 'd3bd662e0179ada5f12068b45499d33c09a86dbd'
+default[:singularity][:version] = '0.4.1'
+default[:singularity][:group] = node[:singularity][:user]
+
 default[:mesos] = {
   :package_version => "0.19.1-1.0.ubuntu1404",
   :common => {
