@@ -14,7 +14,7 @@ default[:singularity] = {
   },
 }
 
-default[:singularity][:git_ref] = '101f3e088c9c3ee52358e6b09fb2f9b8260a9840'
+default[:singularity][:git_ref] = 'd3bd662e0179ada5f12068b45499d33c09a86dbd'
 default[:singularity][:version] = '0.4.1'
 default[:singularity][:group] = node[:singularity][:user]
 
