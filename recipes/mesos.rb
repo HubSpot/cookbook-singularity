@@ -9,7 +9,7 @@ end
 apt_package "mesos" do
   action :install
   version mesos_package_version
-  options "-y --force-yes"  # ghetto
+  options "-y --force-yes"
 end
 
 directory '/etc/mesos' do
